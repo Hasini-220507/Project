@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <style>
+    .cart-item {
+      width:50%;
+      border:1px solid black;
+      border-radius:1px solid black;
+      display: flex;
+      gap: 15px;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding: 30px;
+    }
+    img {
+      width: 200px;
+    }
+  .remove{
+    color:hotpink;
+  }  
+  </style>
+</head>
+<body>
+
+<h2>My Cart</h2>
+<div id="cart-items"></div>
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let container = document.getElementById("cart-items");
+function rendercart(){
+  container.innerHTML = "";
+let total = 0;
+
+cart.forEach((item,index) => {
+  total += item.price * item.quantity;
+
+  container.innerHTML += `
+    <div class="cart-item">
+      <img src="${item.image}">
+      <div>
+    
+        <h4>${item.name}</h4>
+        <p>₹${item.price}</p>
+    <div class="qty">
+    <button class="-" onclick="decreaseqty(${index})">-</button>
+        <span>Qty: ${item.quantity}</span>
+    <button class="+" onclick="increaseqty(${index})">+</button>
+    </div>
+    <p class="remove" onclick="removeItem(${index})">X Remove</p>
+      </div>
+    </div>
+  `;
+});
+
+document.getElementById("total").innerText = total;
+}
+function increaseqty(index){
+  cart[index].quantity+=1;
+  updatecart();
+}
+function decreaseqty(index){
+  if(cart[index].quantity>1){cart[index].quantity-=1;
+  updatecart();
+}
+}
+
+function updatecart(){
+localStorage.setItem("cart",JSON.stringify(cart))
+rendercart()
+}
+
+
+function removeItem(index){
+  cart.splice(index,1)
+  updatecart()
+}
+rendercart()
+</script>
+
+
+
+</body>
+</html>

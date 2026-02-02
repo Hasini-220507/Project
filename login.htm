@@ -15,17 +15,30 @@ background-color:lightpink;
 
 }
 	</style>
+<script>
+	function validate(){
+let v=document.getElementById('pas').value
+let v2=document.getElementById("mai").value
+if(v==""||v2==""||v.length()<8){
+return false
+}
+else{
+	return true
+}
+}
+</script>
+
 
 </head>
 <body>
 <img src="loginn.jpeg" height="260px" width="100%">
 <div class="login">
 <center><h2>Log to your Account</h2></center>
-<form target="_blank" action="index.htm" method="post">
+<form target="_blank" action="index.php" method="post" onsubmit="return validate()">
 	<label for="mail">
-<input type="email" placeholder="Email" name="mail" id="mail"><br><br>
+<input type="email" placeholder="Email" name="mail" id="mai"><br><br>
 <label for="pass"> 
-<input type="password" placeholder="Password" id="pass" name="pass"><br><br>
+<input type="password" placeholder="Password" id="pas" name="pass" id="pas"><br><br>
 <center><input type="submit" name="log in" value="Log in" class="button"></center>
 </form>
 </div>

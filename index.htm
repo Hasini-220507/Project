@@ -14,6 +14,8 @@
 
 </head>
 <body link="black">
+
+
 <header class="header">
     <div class="headerleft">
 <h1 style="color:hotpink;font-size:40px">meesho  </h1>
@@ -23,12 +25,12 @@
 </div>
 
 <div class="headerright">
-<div class="download">  </div>
 <nav>
-<p><a href="https://play.google.com/store/apps/details?id=com.meesho.supply" target="_blank" style="cursor:pointer;text-decoration:none">MOBILE APP 📱</a></p>
+<p class="pa"><a href="https://play.google.com/store/apps/details?id=com.meesho.supply" target="_blank" style="cursor:pointer;text-decoration:none">MOBILE APP 📱</a></p>
 </div>
-<div class="cart"><h2>Cart🛒</h2></div>
-<div class="profile"><h2><a href="login.htm" target="_blank" style="cursor:pointer;text-decoration:none">Login👤</a></h2></div>
+<div class="cart"><h2><a href="cart.htm">Cart🛒</a></h2></div>
+<div class="profile"><h2><a href="login.htm" target="_blank" style="font-size:20px;cursor:pointer;text-decoration:none">Sign in/Login in 👤</a></h2>
+</div>
 </nav>
 </header>
 
@@ -44,10 +46,9 @@
 
 
 <div>
-<img src="big.webp" height="400px" onclick="showoffer()">
+<img src="big.webp" height="400px" onclick="showoffer()" width="1343px">
 
 </div>
-
 
 <div class="info-box">
     <div class="info-item">
@@ -66,11 +67,17 @@
     </div>
 </div>
 
+<br><br>
 
-
-
-
-
+<div class="divider">
+    <hr>
+   <h2> Top Categories to choose from</h2>
+    <hr>
+</div>
+<div style="margin-left:55px;margin-right:55px">
+<img src="store.jpg" height="400px" width="100%">
+</div>
+<br><br>
 <h2 class="title">Products For You</h2>
 <div class="product-container">
 
@@ -79,7 +86,7 @@
         <h4>Bluetooth Headphones</h4>
         <p class="price">₹252 <span>₹282</span> <small>11% off</small></p>
         <p class="rating">⭐ 3.9 | Free Delivery</p>
-        <button name="cart" style="float:right" onclick="placeorder()">Cart</button>
+        <button name="cart" style="float:right" onclick="placeorder1(1,'Bluetooth Headphones',252,'img1.webp')">Cart</button>
     </div>
 
     <div class="card">
@@ -87,7 +94,7 @@
         <h4>Kurti with Dupatta</h4>
         <p class="price">₹186 <span>₹205</span> <small>9% off</small></p>
         <p class="rating">⭐ 4.0 | Free Delivery</p>
-        <button name="cart" style="float:right" onclick="placeorder()">Cart</button>
+        <button name="cart" style="float:right" onclick="placeorder1(2,'Kurti with Dupatta',186,'img2.webp')">Cart</button>
     </div>
 
     <div class="card">
@@ -139,9 +146,10 @@
         <p class="rating">⭐ 4.1 | Free Delivery</p>
         <button name="cart" style="float:right" onclick="placeorder()">Cart</button>
     </div>
-
+ 
 </div>
-
+ 
+<!--
 <div class="videoiframe">
 <h2> Why Shop with us?</h2> 
 
@@ -153,25 +161,64 @@
 
 
 
-</div>
+</div>-->
+
 <footer>
-<div class="foot" style="margin-top:0px;background-color:rgb(255,220,230)">
-<h3>Reach Out to us</h3>
-📘 Facebook   📸 Instagram   ▶️ YouTube   💼 LinkedIn
-<h3>Contact Us</h3>
+<div class="parent">
+<div class=c1>
+<h3>Shop Non-Stop On Meesho</h3>
+
 <pre>
-Meesho Technologies
-Private Limited
-CIN:
-U62099K186569
-3rd Floor,Wing-E,Helios
-Jublie Hills Aside
-Hyderabad
+Trusted by more than 1 crore Indians
+Cash on Delivary|Free Delivary
+</pre> 
+</div>
+
+<div class="c2">
+<pre>
+Careers
+
+Become a supplier
+
+Our Influencer Program
+
+Hall of Fme
+</pre>
+</div>
+<div class="c3">
+<pre>
+Legal and Polocies
+
+Meesho Tech Blog
+
+Notices and Returns
+</pre>
+</div>
+<div class="c4">
+    
+<pre>
+<h3>Reach Out to us</h3>
+📘 Facebook   📸 Instagram 
+▶️ YouTube   💼 LinkedIn
+</pre>
+</div>
+
+</div>
+<div class="c5">
 Email address:
 query@meesho.com
-@2015-2025 Meesho.com
-</pre>
+
+</div>
+
+
 </footer>
+
+
+
+
+
+
+
 <script src="script.js"></script>
 </body>
 </html>
